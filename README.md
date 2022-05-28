@@ -1,5 +1,5 @@
 # ✂️ Local Prunner
-Super tiny CLI to prune your completed branch in your local
+Super tiny CLI to prune completed branches in your local
 
 ## Build
 ```
