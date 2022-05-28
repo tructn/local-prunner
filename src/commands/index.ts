@@ -6,9 +6,22 @@ import prompts from 'prompts'
 
 export default async function (path: string) {
 
-    const dir = path ?? process.cwd()
+    const dir = !path || path === '.' ? process.cwd() : path
+    let remoteUrl = ''
 
-    const remoteUrl = await git.getConfig({
+    try {
+        remoteUrl = await git.getConfig({
+            fs,
+            dir,
+            path: 'remote.origin.url',
+        })
+    }
+    catch (e: any) {
+        console.log(chalk.red(`⛑ ${dir} is not a valid git repository`))
+        process.exit(1)
+    }
+
+    remoteUrl = await git.getConfig({
         fs,
         dir,
         path: 'remote.origin.url',
