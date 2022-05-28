@@ -1,6 +1,11 @@
 # ✂️ Local Prunner
 Super tiny CLI to prune your completed branch in your local
 
+## Build
+```
+npm run build
+```
+
 ## Usage
 
 ```
