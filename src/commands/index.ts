@@ -4,7 +4,12 @@ import fs from 'fs'
 import chalk from 'chalk'
 import prompts from 'prompts'
 
-export default async function (dir: string) {
+export default async function (path: string) {
+
+    const dir = path ?? process.cwd()
+
+    console.log(dir)
+
     const remoteUrl = await git.getConfig({
         fs,
         dir,

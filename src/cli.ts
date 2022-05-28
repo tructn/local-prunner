@@ -6,8 +6,8 @@ import cowsay from 'cowsay'
 
 const cli = createCommand()
 cli
-    .command('lp')
-    .name('lp')
+    .command('prune')
+    .name('prune')
     .description(cowsay.say({
         e: "oO",
         T: "U ",
@@ -15,6 +15,6 @@ cli
     }))
     .argument('[path]', 'Git directory')
     .action(lp)
-    .usage('lp <path>')
+    .usage('prune [path]')
 
 cli.parse(process.argv)
