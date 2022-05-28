@@ -8,8 +8,6 @@ export default async function (path: string) {
 
     const dir = path ?? process.cwd()
 
-    console.log(dir)
-
     const remoteUrl = await git.getConfig({
         fs,
         dir,
