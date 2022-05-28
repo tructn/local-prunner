@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { createCommand } from 'commander'
-import lp from './commands/lp'
+import lp from './commands'
 import cowsay from 'cowsay'
 
 const cli = createCommand()
@@ -11,11 +11,10 @@ cli
     .description(cowsay.say({
         e: "oO",
         T: "U ",
-        text: 'You want to prune your completed local branches ?'
+        text: 'Delete merged branched in your local'
     }))
-    .argument('[path]', 'Your local git workspace')
-    .option('-v, --verbose', "Show all the log")
+    .argument('[path]', 'Git directory')
     .action(lp)
-    .usage('lp <path> [-v,--verbose]')
+    .usage('lp <path>')
 
 cli.parse(process.argv)
