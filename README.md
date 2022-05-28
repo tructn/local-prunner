@@ -1,10 +1,12 @@
-# Local Prunner
-✂️ Super tiny CLI to prune your completed branch in your local
+# ✂️ Local Prunner
+Super tiny CLI to prune your completed branch in your local
 
-## Install
+## Usage
 
-Cd to source code
 ```
-npm install -g .
+node dist/cli.js prune [directory]
 ```
 
+## TODOs
+- [x] Prune completed branches in local
+- [ ] Support private repository
