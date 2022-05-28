@@ -15,3 +15,6 @@ node dist/cli.js prune [directory]
 ## TODOs
 - [x] Prune completed branches in local
 - [ ] Support private repository
+
+## Limitation
+Support only public repository at the moment
