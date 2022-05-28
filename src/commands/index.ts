@@ -42,7 +42,7 @@ export default async function (path: string) {
     }
     catch (e: any) {
         if (e.data.statusCode === 401) {
-            console.log(chalk.red('⛑  Unforunately, currently we are not supporting private repository at the moment!'))
+            console.log(chalk.red('⛑  Unforunately, we are not supporting private repository at the moment.'))
             process.exit(1)
         }
     }
